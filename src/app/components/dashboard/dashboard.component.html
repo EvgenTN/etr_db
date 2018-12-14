@@ -1,0 +1,7 @@
+<h2>
+  dashboard
+</h2>
+<div class="level" *ngFor='let level of levels'>
+  <p>{{level}}</p>
+  <div *ngFor='let elem of elements'><button class="element" *ngIf='elem.level == level'>{{elem.name}}</button></div>
+</div>
