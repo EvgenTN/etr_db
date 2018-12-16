@@ -1,3 +1,33 @@
-<h2>
-  details:
-</h2>
+<mat-card class="details">
+  <h2>Детали:</h2>
+  <form [formGroup]="detailsForm" floatLabel="always" (ngSubmit)="onSubmit()" class="details-form">
+    <mat-form-field class="form-group">
+      <!-- <label for="elementName">Имя</label> -->
+      <div><input matInput placeholder="Имя" type="text" class="form-control" id="elementName" formControlName="elementName"></div>
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <!-- <label for="connection_point">Точка подключения</label> -->
+      <div><input matInput placeholder="Точка подключения" type="text" class="form-control" id="connection_point" formControlName="connection_point"></div>
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <!-- <label for="line_length">Длина линии</label> -->
+      <div><input matInput placeholder="Длина линии" type="text" class="form-control" id="line_length" formControlName="line_length"></div>
+  </mat-form-field>
+    <mat-form-field class="form-group">
+      <!-- <label for="wire_gauge">Сечение кабеля</label> -->
+      <div><input matInput placeholder="Сечение кабеля" type="text" class="form-control" id="wire_gauge" formControlName="wire_gauge"></div>
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <!-- <label for="connecting_systems">Подключенные системы</label> -->
+      <div><input matInput placeholder="Подключенные системы" type="text" class="form-control" id="connecting_systems" formControlName="connecting_systems"></div>
+    </mat-form-field>
+    <mat-form-field class="form-group comment">
+      <!-- <label for="comment">Комментарий</label> -->
+      <div><textarea matInput placeholder="Комментарий" cols="40" type="text" class="form-control" id="comment" formControlName="comment"></textarea></div>
+    </mat-form-field>
+    <div class="buttons">
+      <button mat-raised-button type="reset">Отмена</button>
+      <button mat-raised-button type="submit">Сохранить</button>
+    </div>
+  </form>
+</mat-card>
